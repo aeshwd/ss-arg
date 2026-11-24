@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkylineSyntax Enterprises | Desarrollo Web Profesional - Argentina & India</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: 200%;
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-600 selection:text-white">
+
+    <!-- Top Announcement Marquee -->
+    <div class="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white py-2.5 text-xs md:text-sm font-medium overflow-hidden whitespace-nowrap shadow-md relative z-50">
+        <div class="animate-marquee">
+            <div class="flex items-center justify-around w-full">
+                <span class="mx-4"><i class="fa-solid fa-globe mr-2"></i> Operando globalmente desde India para Argentina y el mundo.</span>
+                <span class="mx-4 text-amber-300 font-semibold cursor-pointer hover:underline" onclick="toggleMarketVersion()"><i class="fa-solid fa-exchange-alt mr-1"></i> ¿Buscas la versión para Negocios en India? Haz clic aquí</span>
+                <span class="mx-4"><i class="fa-solid fa-circle-check mr-2"></i> Facturación y pagos seguros en USD y ARS.</span>
+            </div>
+            <div class="flex items-center justify-around w-full">
+                <span class="mx-4"><i class="fa-solid fa-globe mr-2"></i> Operando globalmente desde India para Argentina y el mundo.</span>
+                <span class="mx-4 text-amber-300 font-semibold cursor-pointer hover:underline" onclick="toggleMarketVersion()"><i class="fa-solid fa-exchange-alt mr-1"></i> ¿Buscas la versión para Negocios en India? Haz clic aquí</span>
+                <span class="mx-4"><i class="fa-solid fa-circle-check mr-2"></i> Facturación y pagos seguros en USD y ARS.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center shadow-lg shadow-brand-600/30">
+                    <i class="fa-solid fa-code text-white text-lg"></i>
+                </div>
+                <div>
+                    <span id="brand-title" class="text-lg font-bold tracking-tight text-white block leading-none">SkylineSyntax</span>
+                    <span class="text-xs text-indigo-400 font-medium" id="market-subtitle">Argentina Digital Operations</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#servicios" class="hover:text-indigo-400 transition">Servicios</a>
+                <a href="#precios" class="hover:text-indigo-400 transition">Planes y Precios</a>
+                <a href="#sobre-mi" class="hover:text-indigo-400 transition">Sobre mí</a>
+                <a href="#contacto" class="hover:text-indigo-400 transition">Contacto</a>
+            </nav>
+            <div>
+                <a href="https://wa.me/917626915690?text=Hola,%20estoy%20interesado%20en%20los%20servicios%20de%20desarrollo%20web%20de%20SkylineSyntax." target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-lg shadow-indigo-600/25 transition flex items-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span class="hidden sm:inline">Consultar por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-32 overflow-hidden border-b border-slate-900">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(79,70,229,0.15),transparent_50%)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="hero-badge">Desarrollo Web Remoto de Alta Gama • Argentina & India</span>
+            </div>
+            <h1 id="hero-heading" class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+                Impulsamos tu negocio en <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Argentina</span> con tecnología de punta.
+            </h1>
+            <p id="hero-subtext" class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
+                Creamos experiencias web ultrarrápidas, modernas y orientadas a la conversión para pymes y emprendedores argentinos, desarrolladas profesionalmente desde India.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#precios" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl shadow-xl shadow-indigo-600/30 transition text-center">
+                    Ver Planes y Precios
+                </a>
+                <a href="https://wa.me/917626915690?text=Hola,%20quiero%20agendar%20una%20consulta%20para%20un%20sitio%20web." target="_blank" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl transition text-center flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                    <span>Hablar por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-24 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Nuestros Servicios Digitales</h2>
+                <p class="mt-4 text-slate-400">Soluciones robustas adaptadas a las necesidades del mercado actual.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-indigo-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-6 text-xl">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Sitio Web Básico / Landing Page</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">De 3 a 5 páginas optimizadas, diseño adaptable a móviles, detalles de contacto y sección de servicios directa.</p>
+                    <span class="text-indigo-400 font-semibold text-sm">Ideal para profesionales y marcas personales.</span>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-indigo-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-purple-600/10 text-purple-400 flex items-center justify-center mb-6 text-xl">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Sitio Web Corporativo</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Entre 5 y 10 páginas con diseño a medida, formularios de consulta avanzados y configuración SEO inicial.</p>
+                    <span class="text-indigo-400 font-semibold text-sm">Ideal para empresas en expansión.</span>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-indigo-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-600/10 text-emerald-400 flex items-center justify-center mb-6 text-xl">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Tienda E-commerce</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6>Catálogo de productos completo, carrito de compras integrado, pasarelas de pago y gestión de pedidos.</p>
+                    <span class="text-indigo-400 font-semibold text-sm">Ideal para venta online automatizada.</span>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-indigo-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-600/10 text-amber-400 flex items-center justify-center mb-6 text-xl">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Sitios para Gastronomía</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Menú digital interactivo, galería de platos, geolocalización, botón directo a WhatsApp y reservas.</p>
+                    <span class="text-indigo-400 font-semibold text-sm">Ideal para restaurantes y cafeterías.</span>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-indigo-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center mb-6 text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Mantenimiento Web</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Actualizaciones periódicas, copias de seguridad de respaldo, monitoreo de seguridad y soporte técnico continuo.</p>
+                    <span class="text-indigo-400 font-semibold text-sm">Tranquilidad operativa garantizada.</span>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-indigo-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-rose-600/10 text-rose-400 flex items-center justify-center mb-6 text-xl">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Optimización y Rendimiento</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Auditoría de velocidad, compresión de activos, optimización de código frontend y mejora de Core Web Vitals.</p>
+                    <span class="text-indigo-400 font-semibold text-sm">Mejora inmediata en posicionamiento.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precios" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Planes y Tarifas Transparentes</h2>
+                <p class="mt-4 text-slate-400">Precios competitivos orientados al mercado internacional. Se aceptan pagos en USD o equivalente.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Starter Plan -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-indigo-500 transition">
+                    <div>
+                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-2">Starter</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Sitio Esencial</h3>
+                        <div class="text-3xl font-extrabold text-white mb-6">160 USD <span class="text-xs text-slate-400 font-normal">/ pago único</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> 1 Página (Landing Page)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Diseño Adaptable</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Formulario de Contacto</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Botón WhatsApp Flotante</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> SEO Básico</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917626915690?text=Hola,%2520quiero%2520contratar%2520el%2520Plan%2520Starter." target="_blank" class="w-full bg-slate-800 hover:bg-indigo-600 text-white font-semibold py-3 rounded-xl transition text-center text-sm">Elegir Plan</a>
+                </div>
+                <!-- Business Plan -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-indigo-500 transition">
+                    <div>
+                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-2">Business</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Sitio Profesional</h3>
+                        <div class="text-3xl font-extrabold text-white mb-6">372 USD <span class="text-xs text-slate-400 font-normal">/ pago único</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Hasta 5 Páginas</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Diseño Profesional a Medida</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Secciones: Inicio, Servicios, Contacto</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Optimización Móvil Avanzada</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> SEO Técnico Básico</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917626915690?text=Hola,%2520quiero%2520contratar%2520el%2520Plan%2520Business." target="_blank" class="w-full bg-slate-800 hover:bg-indigo-600 text-white font-semibold py-3 rounded-xl transition text-center text-sm">Elegir Plan</a>
+                </div>
+                <!-- Professional Plan -->
+                <div class="bg-slate-900 border-2 border-indigo-500 rounded-3xl p-8 flex flex-col justify-between relative shadow-xl shadow-indigo-600/10">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recomendado</div>
+                    <div>
+                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-2">Pro Agency</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Agencia Avanzada</h3>
+                        <div class="text-3xl font-extrabold text-white mb-6">689 USD <span class="text-xs text-slate-400 font-normal">/ pago único</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Hasta 10 Páginas</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Diseño Personalizado Exclusivo</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Formularios Avanzados</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Optimización de Velocidad & SEO</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Integración de Analíticas</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917626915690?text=Hola,%2520quiero%2520contratar%2520el%2520Plan%2520Professional." target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-xl transition text-center text-sm shadow-lg shadow-indigo-600/30">Elegir Plan Pro</a>
+                </div>
+                <!-- E-Commerce Plan -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-indigo-500 transition">
+                    <div>
+                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-2">E-Commerce</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Tienda Online</h3>
+                        <div class="text-3xl font-extrabold text-white mb-6">1061+ USD <span class="text-xs text-slate-400 font-normal">/ a medida</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Catálogo de Productos</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Carrito y Checkout</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Integración de Pagos</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Panel de Administración</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Gestión de Órdenes</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917626915690?text=Hola,%2520quiero%2520cotizar%2520una%2520Tienda%2520E-commerce." target="_blank" class="w-full bg-slate-800 hover:bg-indigo-600 text-white font-semibold py-3 rounded-xl transition text-center text-sm">Cotizar E-commerce</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Founder & CEO) -->
+    <section id="sobre-mi" class="py-24 bg-slate-900/50 border-t border-b border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-30"></div>
+                        <div class="relative bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center shadow-2xl">
+                            <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-3xl font-extrabold text-white shadow-lg">
+                                AG
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Aesh Goswami</h3>
+                            <p class="text-indigo-400 font-medium text-sm mt-1">Fundador & Lead Developer • SkylineSyntax Enterprises</p>
+                            <div class="mt-6 pt-6 border-t border-slate-800 flex justify-center space-x-4 text-slate-400">
+                                <span class="flex items-center text-xs"><i class="fa-solid fa-location-dot text-indigo-400 mr-1.5"></i> India Operations</span>
+                                <span class="flex items-center text-xs"><i class="fa-solid fa-globe text-emerald-400 mr-1.5"></i> Global Remote</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-4">
+                        <span>Liderazgo Técnico & Visión</span>
+                    </div>
+                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">Arquitectura digital construida con rigor y propósito</h2>
+                    <p class="text-slate-300 text-base leading-relaxed mb-6">
+                        Como fundador y desarrollador principal de <strong>SkylineSyntax Enterprises</strong>, dirijo personalmente cada proyecto con un enfoque obsesivo en la calidad del código, la velocidad de carga y la experiencia de usuario. 
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
+                            <h4 class="text-white font-semibold text-sm mb-1 flex items-center"><i class="fa-solid fa-bolt text-amber-400 mr-2"></i> Clean Code & Performance</h4>
+                            <p class="text-slate-400 text-xs">Desarrollo frontend ultrarrápido con HTML5, CSS3, JavaScript y Tailwind CSS sin bloatware innecesario.</p>
+                        </div>
+                        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
+                            <h4 class="text-white font-semibold text-sm mb-1 flex items-center"><i class="fa-solid fa-chess-knight text-indigo-400 mr-2"></i> Pensamiento Estratégico</h4>
+                            <p class="text-slate-400 text-xs">Cada línea de código se diseña pensando en la conversión comercial y la escalabilidad a largo plazo del negocio.</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm italic">
+                        "Creo firmemente que la tecnología debe eliminar fricciones. Mi objetivo es conectar empresas en Argentina con estándares de desarrollo de clase mundial desde nuestras operaciones en India."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contacto" class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-code text-sm"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">SkylineSyntax</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Agencia digital global especializada en desarrollo web de alto rendimiento, conectando clientes internacionales con soluciones robustas.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#servicios" class="hover:text-white transition">Servicios</a></li>
+                        <li><a href="#precios" class="hover:text-white transition">Planes y Precios</a></li>
+                        <li><a href="#sobre-mi" class="hover:text-white transition">Sobre mí (CEO)</a></li>
+                        <li><a href="https://wa.me/917626915690" target="_blank" class="hover:text-white transition">WhatsApp Directo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Contacto Directo</h4>
+                    <p class="text-sm mb-2"><i class="fa-solid fa-envelope mr-2 text-indigo-400"></i> aeshgoswamiwd@gmail.com</p>
+                    <p class="text-sm mb-4"><i class="fa-solid fa-phone mr-2 text-indigo-400"></i> +91 76269 15690</p>
+                    <a href="https://wa.me/917626915690?text=Hola,%20quisiera%20consultar%20sobre%20sus%20servicios%20web." target="_blank" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition shadow-md">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Iniciar Chat de WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 SkylineSyntax Enterprises. Todos los derechos reservados.</p>
+                <p class="mt-2 sm:mt-0">Operaciones Argentina & India • Desarrollado por Aesh Goswami</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating WhatsApp Button -->
+    <a href="https://wa.me/917626915690?text=Hola,%20estoy%20visitando%20el%20sitio%20web%20y%20me%20gustaría%20recibir%20más%20información." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl shadow-emerald-500/50 transition transform hover:scale-110" aria-label="WhatsApp Chat">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Market Toggle Script -->
+    <script>
+        let isArgentina = true;
+        function toggleMarketVersion() {
+            isArgentina = !isArgentina;
+            const subtitle = document.getElementById('market-subtitle');
+            const heroBadge = document.getElementById('hero-badge');
+            const heroHeading = document.getElementById('hero-heading');
+            const heroSubtext = document.getElementById('hero-subtext');
+
+            if (isArgentina) {
+                subtitle.textContent = "Argentina Digital Operations";
+                heroBadge.textContent = "Desarrollo Web Remoto de Alta Gama • Argentina & India";
+                heroHeading.innerHTML = `Impulsamos tu negocio en <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Argentina</span> con tecnología de punta.`;
+                heroSubtext.textContent = "Creamos experiencias web ultrarrápidas, modernas y orientadas a la conversión para pymes y emprendedores argentinos, desarrolladas profesionalmente desde India.";
+            } else {
+                subtitle.textContent = "India Domestic Operations";
+                heroBadge.textContent = "Professional Web Development Agency • India Market";
+                heroHeading.innerHTML = `Empowering businesses in <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">India</span> with cutting-edge tech.`;
+                heroSubtext.textContent = "High-performance, modern, and conversion-focused web solutions built for Indian startups, businesses, and enterprises.";
+            }
+        }
+    </script>
+</body>
+</html>
